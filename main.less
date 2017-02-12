@@ -1,0 +1,238 @@
+
+@red: #F6511D;
+@yellow: #E3B428;
+@pink: pink;
+@green: #7FB800;
+@purple: #CF6FA5;
+@orange: #E3B428;
+@blue: #17AEEE;
+
+@black: #2B2B2C;
+@white: #E3E4E6;
+@grey: #A7A8A9;
+
+@red2: lighten(lighten(lighten(@red, 3.2%), 3.2%), 3.2%);
+@yellow2: lighten(lighten(lighten(lighten(@yellow, 3.2%), 3.2%), 3.2%), 3.2%);
+@pink2: lighten(lighten(@pink, 3.2%), 3.2%);
+@green2: lighten(lighten(@green, 3.2%), 3.2%);
+@purple2: lighten(lighten(lighten(@purple, 3.2%), 3.2%), 3.2%);
+@orange2: lighten(lighten(@orange, 3.2%), 3.2%);
+@blue2: lighten(lighten(lighten(lighten(lighten(lighten(@blue, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%);
+
+@black2: lighten(lighten(@black, 3.2%), 3.2%);
+@white2: darken(darken(@white, 3.2%), 3.2%);
+@grey2: darken(darken(@grey, 3.2%), 3.2%);
+
+@red3: darken(darken(darken(@red, 3.2%), 3.2%), 3.2%);
+@yellow3: darken(darken(darken(@yellow, 3.2%), 3.2%), 3.2%);
+@pink3: darken(darken(@pink, 3.2%), 3.2%);
+@green3: darken(darken(@green, 3.2%), 3.2%);
+@purple3: darken(darken(darken(@purple, 3.2%), 3.2%), 3.2%);
+@orange3: darken(darken(@orange, 3.2%), 3.2%);
+@blue3: lighten(lighten(lighten(lighten(lighten(lighten(lighten(lighten(lighten(@blue, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%);
+
+@black3: darken(darken(@black, 3.2%), 3.2%);
+@white3: lighten(lighten(@white, 3.2%), 3.2%);
+@grey3: lighten(lighten(@grey, 3.2%), 3.2%);
+@grey4: darken(darken(darken(darken(@grey, 3.2%), 3.2%), 3.2%), 3.2%);
+@grey5: lighten(lighten(lighten(lighten(@grey, 3.2%), 3.2%), 3.2%), 3.2%);
+@grey6: darken(darken(darken(darken(darken(darken(@grey, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%);
+@grey7: lighten(lighten(lighten(lighten(lighten(lighten(@grey, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%);
+
+@background_red: fade(darken(darken(darken(darken(darken(darken(@red, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 75%);
+@background_yellow: fade(darken(darken(darken(darken(darken(darken(@yellow, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 50%);
+@background_pink: fade(darken(darken(darken(darken(darken(darken(@pink, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 25%);
+@background_green: darken(darken(darken(darken(darken(darken(darken(darken(@green, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%);
+@background_purple: darken(darken(darken(darken(darken(darken(darken(darken(darken(darken(@purple, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%);;
+@background_orange: darken(darken(darken(darken(darken(darken(darken(darken(darken(darken(@orange, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%);
+@background_blue: darken(darken(darken(darken(darken(darken(darken(darken(darken(darken(@blue, 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%), 3.2%);
+
+@background: @black;
+@foreground: @grey;
+
+span {
+    color: @grey3;
+    &.cm-meta       { color: @white; font-weight: bold; }
+    &.cm-comment    { color: @grey6; font-style: italic; }
+    &.cm-builtin    { color: @red; }
+    &.cm-keyword    { color: @red2; }
+    &.cm-def        { color: @yellow; }
+    &.cm-string     { color: @green; }
+    &.cm-string-2   { color: @green3; }
+    &.cm-number     { color: @green2; }
+    &.cm-variable   { color: @purple; }
+    &.cm-variable-2 { color: @purple2; }
+    &.cm-variable-3 { color: @purple3; }
+    &.cm-variable-4 { color: @pink; }
+    &.cm-attribute  { color: @blue; }
+    &.cm-atom       { color: @blue2; }
+    &.cm-operator, &.cm-bracket { color: @grey; }
+    &.cm-error, &.cm-minus, &.cm-quote { color: @white; background-color: @background_red; }
+}
+
+span.cm-m-xml {
+    &.cm-tag       { color: @red2; }
+    &.cm-attribute { color: @yellow; }
+    &.cm-bracket   { color: @grey2; }
+}
+
+span.cm-m-clike {
+    &.cm-bracket  { color: @yellow; }
+    &.cm-variable { color: @purple; }
+}
+
+span.cm-m-javascript {
+    &.cm-property { color: @yellow3; }
+}
+
+span.cm-m-css,
+span.cm-m-sass {
+    &.cm-property  { color: @blue; }
+    &.cm-attribute { color: @blue3; }
+    &.cm-hr        { text-decoration: underline; }
+    &.cm-plus      { text-decoration: underline; }
+    &.cm-header    { text-decoration: underline; }
+    &.cm-link      { text-decoration: underline; }
+    &.cm-rangeinfo { color: @pink; }
+    &.cm-qualifier { color: @red2; }
+    &.cm-tag       { color: @yellow2; }
+    &.cm-unit      { color: @green3; }
+}
+
+span.cm-m-css {
+    &.cm-builtin { color: @red; }
+}
+
+span.cm-m-sass {
+    &.cm-meta      { color: @red; }
+    &.cm-attribute { color: @red2; }
+}
+
+span.cm-m-yaml {
+    &.cm-number { color: @purple; }
+}
+
+.cm-matchhighlight {
+    background-color: @background_red;
+    border-bottom: none !important;
+}
+
+.CodeMirror-foldgutter-open:after,
+.CodeMirror-foldgutter-folded:after,
+.CodeMirror.over-gutter .CodeMirror-foldgutter-open:after,
+.CodeMirror-activeline .CodeMirror-foldgutter-open:after {
+    font-size: 8px;
+    color: @yellow;
+}
+
+.CodeMirror {
+    line-height: 1.5;
+}
+
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: @black;
+}
+
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 @white;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: rgba(0, 0, 0, .2);
+        color: @black2;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: @grey2;    
+    }
+}
+
+.CodeMirror-searching {
+    background-color: @background_yellow;
+    &.searching-current-match {
+        background-color: @yellow2;
+    }
+}
+
+.CodeMirror-cursor {
+    border-left: 1px solid @grey !important;
+    border-right: 1px solid @grey !important;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 2px solid @grey;
+}
+
+.CodeMirror-gutters {
+    background-color: @black;
+    border-right: none;
+}
+
+.CodeMirror-linenumber {
+    color: @grey6;
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: @background_green;
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+    background: @background_blue;
+}
+
+.CodeMirror-matchingbracket {
+    background-color: @background;
+    color: @yellow2 !important;
+    font-weight: bold !important;
+}
+
+.CodeMirror-matchingtag {
+    background-color: @background_purple;
+}
+
+//.CodeMirror {
+//    .CodeMirror {
+//        background: transparent;
+//    }
+//
+//    .CodeMirror .CodeMirror-gutters {
+//        background: @grey4;
+//        border-right: none;
+//    }
+//
+//    .CodeMirror .CodeMirror-activeline-background {
+//        background: @grey2;
+//    }
+//
+//    .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+//        background: @grey3;
+//        color: @grey5;
+//    }
+//
+//    .CodeMirror-focused .CodeMirror-activeline-background {
+//        background: @black;
+//    }
+//
+//    .CodeMirror-focused .CodeMirror-activeline {
+//        .CodeMirror-gutter-elt {
+//            background: rgba(0, 0, 0, .2);
+//            color: @white3;
+//        }
+//    }
+//}
+//
+//.image-view,
+//.not-editor {
+//    background-color: @background;
+//}
+//
+//.view-pane .image-view {
+//    color: @foreground;
+//}

@@ -1,0 +1,18 @@
+{
+    "title": "Markus Dark Theme",
+    "name": "markus-dark-theme",
+    "description": "New dark theme based around TheSansMono Condensed by LucasFonts",
+    "version": "1.0.0",
+    "author": "Markus Rafferty <stairsleadingup@gmail.com> (https://github.com/markusrafferty)",
+	"homepage": "https://github.com/markusrafferty/markus-dark-theme-for-brackets",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=1.1"
+    },
+    "theme": {
+        "file": "main.less",
+        "dark": true,
+        "addModeClass": true
+    },
+    "keywords": ["theme, dark, markus, new"]
+}
